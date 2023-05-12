@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: "Ubuntu";
+}
+h3 {
+  font-family: "oswald";
+}
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+li {
+  color: #70798c;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr 0.5fr;
+  gap: 2rem;
+}
+.header {
+  background-color: #f5f1ed;
+  padding: 2%;
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+}
+.header ul {
+  display: inline-flex;
+}
+
+.header ul li {
+  margin: 0 10px;
+  cursor: pointer;
+  font-family: "roboto";
+}
+.header ul li:hover {
+  margin: 0 10px;
+  color: #ff6600;
+}
+.header h3 {
+  margin: 10px;
+  color: #ff6600;
+}
+.left-block {
+  align-self: center;
+}
+.left-block ul {
+}
+.left-block ul li {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.left-block ul li:hover {
+  color: #ff6600;
+}
+.main {
+  align-self: center;
+}
+
+.footer {
+  justify-content: center;
+  background-color: #252323;
+  color: #fff;
+
+  grid-column: span 2;
+  display: flex;
+}
+.footer span {
+  color: #ff6600;
+}
+.plan-button {
+  padding: 10px;
+  background-color: #ff6600;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
+.pricing-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pricing-plan {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.plan-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-features li {
+  margin-bottom: 10px;
+}
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+  }
+  /* .left-block {
+    display: inline-flex;
+    justify-content: center;
+  } */
+
+  .left-block ul {
+    display: inline-flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .pricing-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
